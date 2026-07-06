@@ -184,6 +184,25 @@ df_master['Master_Score'] = (
     df_master['Equity_Score']    * 0.60 +
     df_master['Cash_Flow_Score'] * 0.40
 )
+# -------------------------------------------------------------
+# STEP 4.5: ENGINE INDEPENDENCE CHECK
+# Are Equity_Score and Cash_Flow_Score actually measuring
+# different things, or largely moving together?
+# -------------------------------------------------------------
+engine_corr = df_master['Equity_Score'].corr(df_master['Cash_Flow_Score'])
+print("\n" + "="*70)
+print("  ENGINE INDEPENDENCE CHECK")
+print("="*70)
+print(f"  Correlation (Equity_Score vs Cash_Flow_Score): {engine_corr:.3f}")
+
+if abs(engine_corr) < 0.2:
+    verdict = "Low correlation — engines are capturing largely independent signal."
+elif abs(engine_corr) < 0.5:
+    verdict = "Moderate correlation — some overlap, but engines still add distinct information."
+else:
+    verdict = "High correlation — engines are moving together; the 8/10 robust-pick overlap may partly reflect this rather than pure assumption-resilience."
+print(f"  {verdict}")
+print("="*70)
 
 # -------------------------------------------------------------
 # STEP 5: RANKED SCOREBOARD
