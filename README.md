@@ -75,7 +75,7 @@ Detailed information on both tests, including reasoning and what would be needed
 sme_scorer.py                        - https://1drv.ms/x/c/6bdbc2328869d12a/IQB8NyU6Brw1Qqfr7KWMflMPAQTeAXKH1c5u8s6-PBVlnxY?e=vhhvBP         # main scoring script
 Book1(companies_static).csv          - https://1drv.ms/x/c/6bdbc2328869d12a/IQDr3aWCes-LSaQ3sdWtCJ_ZAWuEqs8i0l4WiOejfT12mao?e=Hvwzfh         # equity input data
 Book2(companies_cashflow).csv        - https://1drv.ms/x/c/6bdbc2328869d12a/IQAYNJxhIAfsQL6qdSVxW457Ab9MIuwjuHR9Ulncp-I9VEs?e=I3Rfaj         # cash flow input data
-SME Financial Health Scorer Analysis - https://drive.google.com/file/d/1D6LMmG9mc-IoFQY5RuFudvDndSYvjke9/view?usp=sharing         # complete guide         
+SME Financial Health Scorer Analysis - https://drive.google.com/file/d/1D6LMmG9mc-IoFQY5RuFudvDndSYvjke9/view?usp=sharing                     # complete guide         
 
 ```
 
