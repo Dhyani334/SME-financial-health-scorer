@@ -30,14 +30,14 @@ python sme_scorer.py
 ```
 
 You will need two input CSV files in the same directory as the script:
-- `Book1(companies_static).csv - https://1drv.ms/x/c/6bdbc2328869d12a/IQDr3aWCes-LSaQ3sdWtCJ_ZAWuEqs8i0l4WiOejfT12mao?e=PJ2mcd` — Ticker, P/E, P/B, ROE, Debt/Eq, EPS_Y1, EPS_Y2, EPS_Y3
-- `Book2(companies_cashflow).csv - https://1drv.ms/x/c/6bdbc2328869d12a/IQAYNJxhIAfsQL6qdSVxW457Ab9MIuwjuHR9Ulncp-I9VEs?e=O4cJux` — Ticker, Rev_Q1 to Q6, Rev_Y1 to Y3, OCF_Y1 to Y3
+- `Book1(companies_static).csv - https://1drv.ms/x/c/6bdbc2328869d12a/IQDr3aWCes-LSaQ3sdWtCJ_ZAWuEqs8i0l4WiOejfT12mao?e=PJ2mcd` - Ticker, P/E, P/B, ROE, Debt/Eq, EPS_Y1, EPS_Y2, EPS_Y3
+- `Book2(companies_cashflow).csv - https://1drv.ms/x/c/6bdbc2328869d12a/IQAYNJxhIAfsQL6qdSVxW457Ab9MIuwjuHR9Ulncp-I9VEs?e=O4cJux` - Ticker, Rev_Q1 to Q6, Rev_Y1 to Y3, OCF_Y1 to Y3
 
 The output will include a ranked scoreboard, a four-scenario sensitivity analysis, and `SME_Scorer_Output.csv` with the complete ranked results.
 
 ## Key results (this run, 35 companies)
 
-**Robust Picks** — companies that rank in the top 10 across all four weighting scenarios (Base 60/40, Equal 50/50, Equity-Heavy 70/30, Cashflow-Heavy 40/60):
+**Robust Picks** - companies that rank in the top 10 across all four weighting scenarios (Base 60/40, Equal 50/50, Equity-Heavy 70/30, Cashflow-Heavy 40/60):
 
 > Alldigi Tech, Canara Robeco, Crizac, MPS, Newgen Software, Saksoft, Vikram Solar, Websol Energy
 
@@ -55,11 +55,11 @@ Detailed information on both tests, including reasoning and what would be needed
 
 ## Known limitations
 
-- All scores are **sample-relative** — adding a new company changes every existing company's normalized score.
+- All scores are **sample-relative** - adding a new company changes every existing company's normalized score.
 - **Sector normalization** is only partially validated and requires a larger sample for reliability across all sectors, not just the two tested.
-- Weights (ROE 25%, others 18.75% each; 60/40 Master Score split) are **assumed reasoning,** not derived from actual forward-return regression — this is the next step to take.
-- **No backtest yet.** The model has not undergone validation against actual forward returns — it currently shows internal consistency through the sensitivity and independence checks, not predictive power. This is the most important item still open.
-- There is no liquidity filter — a company might score well but still have issues trading at size.
+- Weights (ROE 25%, others 18.75% each; 60/40 Master Score split) are **assumed reasoning,** not derived from actual forward-return regression - this is the next step to take.
+- **No backtest yet.** The model has not undergone validation against actual forward returns - it currently shows internal consistency through the sensitivity and independence checks, not predictive power. This is the most important item still open.
+- There is no liquidity filter - a company might score well but still have issues trading at size.
 
 ## Roadmap
 
